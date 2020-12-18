@@ -26,7 +26,7 @@ const dataBarChart = {
   labels: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.'],
   datasets: [
     {
-      data: [44, 45, 28, 40, 29, 43],
+      data: [44, 45, 38, 40, 29, 43],
     },
   ],
 };
@@ -83,4 +83,16 @@ const dataPieChart = [
   },
 ];
 
-export { dataLineChart, dataProgressChart, dataBarChart, dataContributionGraph, dataPieChart };
+const dataStackedBarChart = {
+  labels: ["Test1", "Test2", "Test3", "Test4"],
+  legend: ["L1", "L2", "L3"],
+  data: [
+    [60, 60, 60],
+    [30, 30, 60],
+    [20, 50, 20],
+    [15, 50, 50]
+  ],
+  barColors: ["#dfe4ea", "#ced6e0", "#a4b0be"]
+};
+
+export { dataLineChart, dataProgressChart, dataBarChart, dataContributionGraph, dataPieChart, dataStackedBarChart };
