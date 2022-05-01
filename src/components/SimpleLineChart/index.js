@@ -1,9 +1,8 @@
 import React from 'react';
-import { LineChart } from 'react-native-chart-kit';
-import { Dimensions } from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+import {LineChart} from 'react-native-chart-kit';
 
-const SimpleLineChart = ({ data, config, bezier = false }) => {
-
+const SimpleLineChart = ({data, config, bezier = false}) => {
   const screenWidth = Dimensions.get('window').width;
 
   return (
@@ -11,14 +10,18 @@ const SimpleLineChart = ({ data, config, bezier = false }) => {
       bezier={bezier}
       data={data}
       width={screenWidth}
-      height={256}
+      height={240}
       withHorizontalLabels={true}
       chartConfig={config}
-      style={{
-        marginTop: 30,
-      }}
+      style={styles.container}
     />
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 30,
+  },
+});
 
 export default SimpleLineChart;

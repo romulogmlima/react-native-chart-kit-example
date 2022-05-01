@@ -1,9 +1,8 @@
 import React from 'react';
-import { Dimensions } from 'react-native';
-import { ProgressChart } from 'react-native-chart-kit';
+import {Dimensions, StyleSheet} from 'react-native';
+import {ProgressChart} from 'react-native-chart-kit';
 
-const SimpleProgressChart = ({ data, config }) => {
-
+const SimpleProgressChart = ({data, config}) => {
   const screenWidth = Dimensions.get('window').width;
 
   return (
@@ -15,12 +14,16 @@ const SimpleProgressChart = ({ data, config }) => {
       radius={30}
       chartConfig={config}
       hideLegend={false}
-      style={{
-        marginTop: 20,
-        marginRight: 0,
-      }}
+      style={styles.container}
     />
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 20,
+    marginRight: 0,
+  },
+});
 
 export default SimpleProgressChart;

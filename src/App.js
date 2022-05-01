@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import {ScrollView} from 'react-native';
 
 import SimpleBarChart from './components/SimpleBarChart';
 import SimpleProgressChart from './components/SimpleProgressChart';
@@ -14,11 +14,10 @@ import {
   dataBarChart,
   dataContributionGraph,
   dataPieChart,
-  dataStackedBarChart
+  dataStackedBarChart,
 } from './data';
 
 const App = () => {
-
   const chartConfig = {
     backgroundGradientFrom: '#fff',
     backgroundGradientFromOpacity: 0,
@@ -32,12 +31,19 @@ const App = () => {
 
   return (
     <ScrollView>
-      <SimpleLineChart data={dataLineChart} config={chartConfig} bezier={true}/>
+      <SimpleLineChart
+        data={dataLineChart}
+        config={chartConfig}
+        bezier={true}
+      />
       <SimpleProgressChart data={dataProgressChart} config={chartConfig} />
-      <SimpleContributionGraph data={dataContributionGraph} config={chartConfig} />
+      <SimpleContributionGraph
+        data={dataContributionGraph}
+        config={chartConfig}
+      />
       <SimpleBarChart data={dataBarChart} config={chartConfig} />
       <SimplePieChart data={dataPieChart} config={chartConfig} />
-      <SimpleStackedBarChart data={dataStackedBarChart} config={chartConfig}/>
+      <SimpleStackedBarChart data={dataStackedBarChart} config={chartConfig} />
     </ScrollView>
   );
 };

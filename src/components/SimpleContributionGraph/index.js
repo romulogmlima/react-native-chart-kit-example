@@ -1,9 +1,8 @@
 import React from 'react';
-import { ContributionGraph } from 'react-native-chart-kit';
-import { Dimensions } from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+import {ContributionGraph} from 'react-native-chart-kit';
 
-const SimpleContributionGraph = ({ data, config }) => {
-
+const SimpleContributionGraph = ({data, config}) => {
   const screenWidth = Dimensions.get('window').width;
 
   return (
@@ -14,13 +13,17 @@ const SimpleContributionGraph = ({ data, config }) => {
       width={screenWidth}
       height={220}
       chartConfig={config}
-      style={{
-        marginLeft: 10,
-        marginTop: 10,
-        marginRight: 10,
-      }}
+      style={styles.container}
     />
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginLeft: 10,
+    marginTop: 10,
+    marginRight: 10,
+  },
+});
 
 export default SimpleContributionGraph;

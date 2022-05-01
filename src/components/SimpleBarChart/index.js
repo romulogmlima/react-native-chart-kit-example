@@ -1,9 +1,8 @@
 import React from 'react';
-import { BarChart } from 'react-native-chart-kit';
-import { Dimensions } from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+import {BarChart} from 'react-native-chart-kit';
 
-const SimpleBarChart = ({ data, config }) => {
-
+const SimpleBarChart = ({data, config}) => {
   const screenWidth = Dimensions.get('window').width;
 
   return (
@@ -13,15 +12,18 @@ const SimpleBarChart = ({ data, config }) => {
       height={220}
       yAxisLabel="$"
       chartConfig={config}
-      //verticalLabelRotation={30}
       withHorizontalLabels={true}
-      style={{
-        marginLeft: 10,
-        marginTop: 30,
-        marginRight: 10,
-      }}
+      style={styles.container}
     />
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginLeft: 10,
+    marginTop: 30,
+    marginRight: 10,
+  },
+});
 
 export default SimpleBarChart;

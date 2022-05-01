@@ -1,4 +1,3 @@
-
 const dataLineChart = {
   labels: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.'],
   datasets: [
@@ -32,17 +31,17 @@ const dataBarChart = {
 };
 
 const dataContributionGraph = [
-  { date: "2017-01-02", count: 1 },
-  { date: "2017-01-03", count: 2 },
-  { date: "2017-01-04", count: 3 },
-  { date: "2017-01-05", count: 4 },
-  { date: "2017-01-06", count: 5 },
-  { date: "2017-01-30", count: 2 },
-  { date: "2017-01-31", count: 3 },
-  { date: "2017-03-01", count: 7 },
-  { date: "2017-04-01", count: 4 },
-  { date: "2017-03-05", count: 2 },
-  { date: "2017-02-30", count: 4 }
+  {date: '2017-01-02', count: 1},
+  {date: '2017-01-03', count: 2},
+  {date: '2017-01-04', count: 3},
+  {date: '2017-01-05', count: 4},
+  {date: '2017-01-06', count: 5},
+  {date: '2017-01-30', count: 2},
+  {date: '2017-01-31', count: 3},
+  {date: '2017-03-01', count: 7},
+  {date: '2017-04-01', count: 4},
+  {date: '2017-03-05', count: 2},
+  {date: '2017-02-30', count: 4},
 ];
 
 const dataPieChart = [
@@ -84,15 +83,22 @@ const dataPieChart = [
 ];
 
 const dataStackedBarChart = {
-  labels: ["Test1", "Test2", "Test3", "Test4"],
-  legend: ["L1", "L2", "L3"],
+  labels: ['Test1', 'Test2', 'Test3', 'Test4'],
+  legend: ['L1', 'L2', 'L3'],
   data: [
     [60, 60, 60],
     [30, 30, 60],
     [20, 50, 20],
-    [15, 50, 50]
+    [15, 50, 50],
   ],
-  barColors: ["#dfe4ea", "#ced6e0", "#a4b0be"]
+  barColors: ['#dfe4ea', '#ced6e0', '#a4b0be'],
 };
 
-export { dataLineChart, dataProgressChart, dataBarChart, dataContributionGraph, dataPieChart, dataStackedBarChart };
+export {
+  dataLineChart,
+  dataProgressChart,
+  dataBarChart,
+  dataContributionGraph,
+  dataPieChart,
+  dataStackedBarChart,
+};
